@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row justify-content-md-start">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                Chào mừng
+            </div>
+            <div class="card-body">
+                @if (Session["FullName"] != null)
+                {
+                    <p>Name: @Session["FullName"].ToString()</p>
+                    <p>Email: @Session["Email"].ToString()</p>
+                    <a href="@Url.Action("Logout","Home")" class="btn btn-warning">Đăng xuất</a>
+                }
+            </div>
+
+        </div>
+
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                Tạo tài khoản mới
+            </div>
+            <div class="card-body">
+                <a href="@Url.Action("Register","Home")" class="btn btn-warning">Tạo tài khoản mới</a>
+            </div>
+
+        </div>
+
+    </div>
+</div>

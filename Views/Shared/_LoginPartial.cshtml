@@ -1,0 +1,29 @@
+﻿
+<ul class="navbar-nav">
+    @if (Session["FullName"] != null)
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Home/Index" title="Trang chủ">
+                Chào mừng
+                <div class="card-body">
+                    @if (Session["FullName"] != null)
+                    {
+                        <p>Name: @Session["FullName"].ToString()</p>
+                        <p>Email: @Session["Email"].ToString()</p>
+                        <a href="@Url.Action("Logout","Home")" class="nav-link btn btn-link text-dark">Đăng xuất</a>
+                    }
+                </div>
+            </a>
+        </li>
+                                   
+    }
+    else
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="Register" asp-page="~/Home/Register">Đăng ký</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="Login" asp-page="~/Home/Login">Đăng nhập</a>
+        </li>
+    }
+</ul>
