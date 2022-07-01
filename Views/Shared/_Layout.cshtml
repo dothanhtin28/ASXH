@@ -22,32 +22,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - SỐ HÓA ASXH</title>
     <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="~/Content/custom-skin.css" rel="stylesheet" />
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+          integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+          crossorigin="anonymous" />
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">SỐ HÓA ASXH</a>
+                <a class="navbar-brand" asp-area="" asp-page="/Index"><img src="~/imgs/logo.svg" height="45"/> </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark"
-                               @Html.ActionLink("Trang chủ", "Index", "Home")
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
+                    <ul class="navbar-nav">
+                        <li class="nav-item nav-link nav-link-active">
+                            <i class="fas fa-home"></i>
+                            <a class="text-dark"
+                               @Html.ActionLink("Trang chủ", "Index", "Home") 
                             </a>
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link text-dark"
+                        <li class="nav-item nav-link">
+                            <i class='fas fa-user'></i>
+                            <a class="text-dark"
                                @Html.ActionLink("Đăng ký", "Register", "Home")
                             </a>
                         </li>
-
+                        <li class="nav-item nav-link">
+                            <i class='fa fa-phone'></i>
+                            <a class="text-dark">
+                             Trợ giúp 
+                            </a>
+                        </li>
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>
@@ -60,8 +74,8 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
+    <footer class="border-top footer text-muted custom-footer">
+        <div class="container-footer">
             &copy; 2022 - Số hóa ASXH
         </div>
     </footer>

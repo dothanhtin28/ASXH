@@ -1,0 +1,93 @@
+
+*{
+    font-size:11.5pt;
+}
+.custom-footer {
+    position: fixed;
+    bottom: 0px;
+    
+    width: 100% !important;
+    text-align: center;
+    color: #a7a7a7;
+}
+.container-footer
+{
+    color:#3b3b3b;
+    padding:10px;
+    font-size:10pt;
+    
+}
+.navbar-light
+{
+
+    background-color:#004ba1
+}
+.right
+{
+
+    float:right!important;
+}
+.text-dark
+{
+    text-decoration:none!important;
+}
+.nav-link-active{
+   
+}
+.nav-link:hover,a:hover {
+ 
+    color:#004ba1!important;
+    cursor:pointer!important;
+}
+.nav-item {
+    text-align: center;
+    min-width:120px
+  
+}
+.right-div-login, .left-div-login {
+    min-height: 50vh;
+}
+.card{
+    padding-top:30px;
+    padding-bottom:30px;
+}
+.form-group
+{
+    padding-top:5px;
+    padding-bottom:5px;
+}
+.custom-login-form {
+    padding: 20px !important;
+    width: 80% !important;
+    margin: auto;
+    background-image: url(https://app.linkhumans.com/_nuxt/img/login-banner.d270d7f.png);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 4% !important;
+    margin-top: 3%;
+}
+.sub
+{
+    font-size:10pt!important;
+    font-style:italic
+
+}
+.btn-custom-btn-login
+{
+
+    float:right;
+    padding-left:10%;
+    padding-right:10%;
+    border-radius:100px!important;
+
+}
+.left-div-login
+{
+    
+
+}
+.card {
+    background-color: #ffffffe7 !important;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}

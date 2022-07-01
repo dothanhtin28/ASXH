@@ -4,27 +4,29 @@
     ViewBag.Title = "Login";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div class="row justify-content-md-center">
-    <div class="col-md-4">
+<div class="row justify-content-md-center pt-lg-5 custom-login-form">
+    <div class="col-md-6 right-div-login"></div>
+    <div class="col-md-6 left-div-login">
         <div class="card">
-            <div class="card-header">
-                Login
-            </div>
+          
             <div class="card-body">
+                <small>
+                    <i>Xin vui lòng đăng nhập hệ thống.</i>
+                </small>
                 @using (Html.BeginForm("Login", "Home", FormMethod.Post))
                 {
                     @Html.AntiForgeryToken()
                     <div class="form-group">
-                        @Html.LabelFor(m => m.Email)
+                        <small class="sub">@Html.LabelFor(m => m.Email)</small>
                         @Html.TextBoxFor(m => m.Email, "", new { @class = "form-control", @placeholder = "Email" })
 
                     </div>
                     <div class="form-group">
-                        @Html.LabelFor(m => m.Password)
+                        <small class="sub">@Html.LabelFor(m => m.Password)</small>
                         @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Password" })
                     </div>
                     <div class="form-group">
-                        <input type="submit" name="submit" class="btn btn-primary" value="Đăng nhập" />
+                        <input type="submit" name="submit" class="btn btn-primary btn-custom-btn-login" value="Đăng nhập" /> <i class='fa fa-sign-in'></i>
                     </div>
                 }
             </div>
